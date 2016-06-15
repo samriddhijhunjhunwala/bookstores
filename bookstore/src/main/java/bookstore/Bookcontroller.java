@@ -34,7 +34,11 @@ public class Bookcontroller {
 	{
 		return "register";
 	}
-	
+	@RequestMapping("/books")
+	public String loadBooksPage()
+	{
+		return "books";
+	}
 	
 
 }
