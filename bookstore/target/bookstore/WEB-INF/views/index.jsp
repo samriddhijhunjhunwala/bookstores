@@ -39,21 +39,21 @@
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home</a></li>
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">BOOKS <span class="caret"></span></a>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="books">BOOKS <span class="caret"></span></a>
         <ul class="dropdown-menu">
       <li class="dropdown-header">FEATURED STORE</li>
-      <li><a href="#">Preorders</a></li>
-      <li><a href="#">New Realeases</a></li>
-      <li><a href="#">Best Sellers</a></li>
-       <li><a href="#">Indian Author</a></li>
-        <li><a href="#">Academic books</a></li>
-        <li><a href="#">Literature and Fiction</a></li>
+      <li><a href="books">Preorders</a></li>
+      <li><a href="books">New Realeases</a></li>
+      <li><a href="books">Best Sellers</a></li>
+       <li><a href="books">Indian Author</a></li>
+        <li><a href="books">Academic books</a></li>
+        <li><a href="books">Literature and Fiction</a></li>
       <li class="divider"></li>
       <li class="dropdown-header">KIDS AND TEENS</li>
-      <li><a href="#">Picture books</a></li>
-      <li><a href="#">Comics</a></li><li>
-      <li><a href="#">Activity Books</a></li>
-      <li><a href="#">Fun and Games</a></li>
+      <li><a href="books">Picture books</a></li>
+      <li><a href="books">Comics</a></li><li>
+      <li><a href="books">Activity Books</a></li>
+      <li><a href="books">Fun and Games</a></li>
     </ul>
       <li><a href="aboutus">About Us</a></li>
     <li><a href="contactus">Contact Us</a></li>
@@ -73,7 +73,7 @@
   </ol> 
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-   <img src="webapp/resources/images/books.jpg" class="img-responsive"></img>
+   <img src="books.jpg" class="img-responsive"></img>
    
     <div class="carousel-caption">
         <h3>PICTURE BOOKS</h3>

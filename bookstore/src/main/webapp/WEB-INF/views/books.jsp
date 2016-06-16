@@ -4,7 +4,7 @@
 <title>user_product_page</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <style>  
@@ -12,8 +12,16 @@
     background: black;
     color: white;
 }
-
-  </style>  
+</style>  
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">   
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<link rel="stylesheet" 
+href="http://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css">
+<script type="text/javascript" 
+src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" 
+src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+ 
   
 </head>
 <body>
@@ -51,3 +59,97 @@
   </div>
 </nav>
 <h1>USER PRODUCT PAGE</h1>
+
+<table id="myTable">  
+        <thead>  
+          <tr>  
+            <th>book_id</th>  
+            <th>Book_Name</th>  
+            <th>Authors_Name</th>  
+            <th>Price</th>  
+          </tr>  
+        </thead>  
+        <tbody>  
+          <tr>  
+            <td>001</td>  
+            <td>Charlie and the chocolate factory</td>  
+            <td>Roald Dahl</td>  
+            <td>500</td>  
+          </tr>  
+          <tr>  
+            <td>002</td>  
+            <td>The Secret Seven</td>  
+            <td>Enid Blyton</td>  
+            <td>280</td>  
+          </tr>  
+          <tr>  
+            <td>003</td>  
+            <td>Revolution 2020</td>  
+            <td>Chetan Bhagat</td>  
+            <td>350</td>  
+          </tr>  
+           <tr>  
+            <td>004</td>  
+            <td>Secret</td>  
+            <td> Rhonda Byrne</td>  
+            <td>800</td>  
+          </tr>  
+          <tr>  
+            <td>005</td>  
+            <td>Feluda</td>  
+            <td>Satyajit Ray</td>  
+            <td>650</td>  
+          </tr>  
+          <tr>  
+            <td>006</td>  
+            <td>The Kite Runner</td>  
+            <td>Khaled Hosseini</td>  
+            <td>450</td>  
+          </tr>  
+          
+           <tr>  
+            <td>007</td>  
+            <td>Twilight</td>  
+            <td>Stephenie Meyer</td>  
+            <td>140</td>  
+          </tr>  
+          <tr>  
+            <td>008</td>  
+            <td>To kill a mocking bird</td>  
+            <td>Harper lee</td>  
+            <td>390</td>  
+          </tr>  
+          <tr>  
+            <td>009</td>  
+            <td>Path of Glory</td>  
+            <td>Jeffrey Archer</td>  
+            <td>299</td>  
+          </tr>  
+          
+            <tr>  
+            <td>010</td>  
+            <td>Tom Jones </td>  
+            <td>Henry Fielding</td>  
+            <td>300</td>  
+          </tr>  
+          <tr>  
+            <td>011</td>  
+            <td>David Copperfield </td>  
+            <td> Charles Dickens</td>  
+            <td>500</td>  
+          </tr>  
+          <tr>  
+            <td>012</td>  
+            <td>Pride and Prejudice</td>  
+            <td>Jane Austen</td>  
+            <td>650</td>  
+          </tr>  
+        </tbody>  
+      </table>  
+  <script>
+$(document).ready(function(){
+    $('#myTable').dataTable();
+});
+</script>
+<table id="myTable" class="table table-striped" >  
+</table>
