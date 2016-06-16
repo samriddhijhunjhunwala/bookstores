@@ -12,7 +12,15 @@
     background: black;
     color: white;
 }
-
+.carousel-caption {
+    top: 0;
+    bottom: auto;
+}
+ .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+      margin: auto;
+    }
   </style>  
   
 </head>
@@ -21,11 +29,11 @@
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="index">BookStore.in</a>
-      <img src="books/openbook.png" style="max-height:45px;max-width:300px;">
+      <img src="resources/images/openbook.png" style="max-height:45px;max-width:300px;">
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="index">Home</a></li>
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="books">BOOKS <span class="caret"></span></a>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">BOOKS <span class="caret"></span></a>
         <ul class="dropdown-menu">
       <li class="dropdown-header">FEATURED STORE</li>
       <li><a href="books">Preorders</a></li>
@@ -50,9 +58,17 @@
     </ul>
   </div>
 </nav>
+<br>
 
-<h1>ABOUT US</h1>
-<p>BookStore.in offers you over 10 million titles across categories such as Childrens Books, 
+
+     <div class="carousel-inner" role="listbox">
+    <div class="item active">
+   <img src="resources/images/picture.jpg" class="img-responsive"></img>
+   
+    <div class="carousel-caption">
+     <div class="carousel-caption right-caption text-right">
+        <h3>ABOUT US</h3>
+        <p>BookStore.in offers you over 10 million titles across categories such as Childrens Books, 
 Business and Economics, Indian Writing and Literature and Fiction.
 Reading books is the favourite pastime of many people. If you are bitten by the book-bug too, then there is a massive collection of books for you to read. 
 From bestsellers to new and future releases, the choices are exhaustive when you shop online at India's Largest Bookstore.
@@ -78,6 +94,13 @@ that you can benefit from a safe and secure online ordering experience, convenie
 such as cash on delivery, easy returns and enjoy a completely hassle free online shopping experience. 
 
 You can now also buy and sell used books at Bookstore.in completely tension free.</p><br>
+        
+    </div>
+    </div>
+    </div>
+    </div>
+
+
 
 
 <footer>
@@ -88,6 +111,8 @@ You can now also buy and sell used books at Bookstore.in completely tension free
                 </div>
                 </div>
  </footer>       
+
+
 
 </body>
 </html>

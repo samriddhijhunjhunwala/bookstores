@@ -29,7 +29,7 @@ src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></scrip
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="index">BookStore.in</a>
-      <img src="books/openbook.png" style="max-height:45px;max-width:300px;">
+      <img src="resources/images/openbook.png" style="max-height:45px;max-width:300px;">
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="index">Home</a></li>
