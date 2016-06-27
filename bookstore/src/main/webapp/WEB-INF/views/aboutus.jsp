@@ -11,16 +11,24 @@
   .panel-footer.panel-custom {
     background: black;
     color: white;
-}
+ }
 .carousel-caption {
     top: 0;
     bottom: auto;
-}
+  }
  .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
       width: 100%;
       margin: auto;
     }
+    
+    p
+    {
+    color: black;
+    }
+    #pname{
+     color: white;
+     }
   </style>  
   
 </head>
@@ -36,12 +44,12 @@
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">BOOKS <span class="caret"></span></a>
         <ul class="dropdown-menu">
       <li class="dropdown-header">FEATURED STORE</li>
-      <li><a href="books">Preorders</a></li>
-      <li><a href="books">New Realeases</a></li>
-      <li><a href="books">Best Sellers</a></li>
-       <li><a href="books">Indian Author</a></li>
-        <li><a href="books">Academic books</a></li>
-        <li><a href="books">Literature and Fiction</a></li>
+      <li><a href="bookuser">Preorders</a></li>
+      <li><a href="bookuser">New Realeases</a></li>
+      <li><a href="bookuser">Best Sellers</a></li>
+       <li><a href="bookuser">Indian Author</a></li>
+        <li><a href="bookuser">Academic books</a></li>
+        <li><a href="bookuser">Literature and Fiction</a></li>
       <li class="divider"></li>
       <li class="dropdown-header">KIDS AND TEENS</li>
       <li><a href="books">Picture books</a></li>
@@ -67,7 +75,7 @@
    
     <div class="carousel-caption">
      <div class="carousel-caption right-caption text-right">
-        <h3>ABOUT US</h3>
+        <h2 style="font-weight:bold; color:black;">ABOUT US</h2>
         <p>BookStore.in offers you over 10 million titles across categories such as Childrens Books, 
 Business and Economics, Indian Writing and Literature and Fiction.
 Reading books is the favourite pastime of many people. If you are bitten by the book-bug too, then there is a massive collection of books for you to read. 
@@ -107,7 +115,7 @@ You can now also buy and sell used books at Bookstore.in completely tension free
 <br><br><br><br><br><br>
 <div class="panel-footer panel-custom text-center">
                 <div class="container-fluid">
-                 <p>Copyright &copy;BookStore.in 2016</p>
+                 <p id="pname">Copyright &copy;BookStore.in 2016</p>
                 </div>
                 </div>
  </footer>       

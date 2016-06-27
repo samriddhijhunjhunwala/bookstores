@@ -20,19 +20,19 @@
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="index">BookStore.in</a> 
-      <img src="books/openbook.png" style="max-height:45px;max-width:300px;">
+      <img src="resources/images/openbook.png" style="max-height:45px;max-width:300px;">
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="index">Home</a></li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="books">BOOKS <span class="caret"></span></a>
         <ul class="dropdown-menu">
       <li class="dropdown-header">FEATURED STORE</li>
-      <li><a href="books">Preorders</a></li>
-      <li><a href="books">New Realeases</a></li>
-      <li><a href="books">Best Sellers</a></li>
-       <li><a href="books">Indian Author</a></li>
-        <li><a href="books">Academic books</a></li>
-        <li><a href="books">Literature and Fiction</a></li>
+      <li><a href="bookuser">Preorders</a></li>
+      <li><a href="bookuser">New Realeases</a></li>
+      <li><a href="bookuser">Best Sellers</a></li>
+       <li><a href="bookuser">Indian Author</a></li>
+        <li><a href="bookuser">Academic books</a></li>
+        <li><a href="bookuser">Literature and Fiction</a></li>
       <li class="divider"></li>
       <li class="dropdown-header">KIDS AND TEENS</li>
       <li><a href="books">Picture books</a></li>
@@ -50,9 +50,7 @@
   </div>
 </nav>
 <br> 
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-6">
+<div class="container text-center">
 
     <h1>Contact Us</h1>
                     <span style="font-weight:bold">Address:</span>Bhavanagar,Keshav Puram,Tri Nagar,
@@ -66,10 +64,11 @@
               <a href="https://www.facebook.com/"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
 	            <a href="https://twitter.com/"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
 	            <a href="https://plus.google.com/"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a> 
-	           
-	               </div>
-	           </div>
-	            </div>  
+	     
+	            </div><br><br>
+	          
+	  
+	  
 	            
 
 <footer>

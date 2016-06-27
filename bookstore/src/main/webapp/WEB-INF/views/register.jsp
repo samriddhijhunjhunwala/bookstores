@@ -28,12 +28,12 @@
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="books">BOOKS <span class="caret"></span></a>
         <ul class="dropdown-menu">
       <li class="dropdown-header">FEATURED STORE</li>
-      <li><a href="books">Preorders</a></li>
-      <li><a href="books">New Realeases</a></li>
-      <li><a href="books">Best Sellers</a></li>
-       <li><a href="books">Indian Author</a></li>
-        <li><a href="books">Academic books</a></li>
-        <li><a href="books">Literature and Fiction</a></li>
+      <li><a href="bookuser">Preorders</a></li>
+      <li><a href="bookuser">New Realeases</a></li>
+      <li><a href="bookuser">Best Sellers</a></li>
+       <li><a href="bookuser">Indian Author</a></li>
+        <li><a href="bookuser">Academic books</a></li>
+        <li><a href="bookuser">Literature and Fiction</a></li>
       <li class="divider"></li>
       <li class="dropdown-header">KIDS AND TEENS</li>
       <li><a href="books">Picture books</a></li>

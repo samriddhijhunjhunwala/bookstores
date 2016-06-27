@@ -35,19 +35,19 @@
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="index">BookStore.in</a> 
-      <img src="books/openbook.png" style="max-height:45px;max-width:300px;">
+      <img src="resources/images/openbook.png" style="max-height:45px;max-width:300px;">
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home</a></li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="books">BOOKS <span class="caret"></span></a>
         <ul class="dropdown-menu">
       <li class="dropdown-header">FEATURED STORE</li>
-      <li><a href="books">Preorders</a></li>
-      <li><a href="books">New Realeases</a></li>
-      <li><a href="books">Best Sellers</a></li>
-       <li><a href="books">Indian Author</a></li>
-        <li><a href="books">Academic books</a></li>
-        <li><a href="books">Literature and Fiction</a></li>
+      <li><a href="bookuser">Preorders</a></li>
+      <li><a href="bookuser">New Realeases</a></li>
+      <li><a href="bookuser">Best Sellers</a></li>
+       <li><a href="bookuser">Indian Author</a></li>
+        <li><a href="bookuser">Academic books</a></li>
+        <li><a href="bookuser">Literature and Fiction</a></li>
       <li class="divider"></li>
       <li class="dropdown-header">KIDS AND TEENS</li>
       <li><a href="books">Picture books</a></li>
@@ -73,7 +73,7 @@
   </ol> 
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-   <img src="books.jpg" class="img-responsive"></img>
+   <img src="resources/images/books.jpg" class="img-responsive"></img>
    
     <div class="carousel-caption">
         <h3>PICTURE BOOKS</h3>
@@ -82,14 +82,14 @@
     </div>
 
     <div class="item">
-      <img src="books/Collages1.jpg" ></img>
+      <img src="resources/images/Collages1.jpg" ></img>
         <div class="carousel-caption">
         <h3>REFERENCE BOOKS</h3>
     </div>
     </div>
 
     <div class="item">
-      <img src="books/books2.jpg"></img>
+      <img src="resources/images/books2.jpg"></img>
         <div class="carousel-caption">
       <h3>STORY BOOKS AND NOVELS</h3>
     </div>
