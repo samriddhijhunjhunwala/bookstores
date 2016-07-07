@@ -56,6 +56,8 @@
       <li><a href="books">Comics</a></li><li>
       <li><a href="books">Activity Books</a></li>
       <li><a href="books">Fun and Games</a></li>
+      <li class="divider"></li>
+        <li><a href="studentdetails">Productdetails</a></li>
     </ul>
       <li><a href="aboutus">About Us</a></li>
     <li><a href="contactus">Contact Us</a></li>

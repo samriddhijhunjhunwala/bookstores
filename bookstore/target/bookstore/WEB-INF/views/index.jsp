@@ -22,7 +22,10 @@
     background: black;
     color: white;
 }
-
+div > h3 {
+color:white;
+font-weight:bold;
+}
   </style>
  
 
@@ -54,9 +57,12 @@
       <li><a href="books">Comics</a></li><li>
       <li><a href="books">Activity Books</a></li>
       <li><a href="books">Fun and Games</a></li>
+       <li class="divider"></li>
+        <li><a href="studentdetails">Productdetails</a></li>
     </ul>
       <li><a href="aboutus">About Us</a></li>
     <li><a href="contactus">Contact Us</a></li>
+      
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
