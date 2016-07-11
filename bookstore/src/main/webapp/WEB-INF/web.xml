@@ -20,7 +20,7 @@
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>/WEB-INF/dispatcher-servlet.xml,
-		/WEB-INF/hibernate.cfg.xml, /WEB-INF/application-context.xml</param-value>
+		/WEB-INF/hibernate.cfg.xml</param-value>
 	</context-param>
  
 	<listener>

@@ -6,6 +6,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import model.Student;
 
@@ -25,7 +26,7 @@ public class StudentDAOImpl {
     
     public void addPerson(Student p) {
         Session session = this.sessionFactory.getCurrentSession();
-        session.persist(p);
+        session.save(p);
         
     }
     
@@ -46,12 +47,13 @@ public class StudentDAOImpl {
         
         return p;
     }
-    
+    @Transactional
     public void removePerson(int id) {
         Session session = this.sessionFactory.getCurrentSession();
         Student p = (Student) session.load(Student.class, new Integer(id));
         if(null != p){
             session.delete(p);
+            session.flush();
         }
         
     }
