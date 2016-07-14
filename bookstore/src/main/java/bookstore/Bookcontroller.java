@@ -25,7 +25,6 @@ import com.google.gson.Gson;
 
 import bookstore.StudentService;
 import daoimplementation.Productdaoimp;
-import form.CrunchifyFileUpload;
 import model.Productlist;
 import model.Student;
 
@@ -110,17 +109,63 @@ private StudentService ss;
 	    }
 	 
 	 @RequestMapping(value= "/studentdetails/add", method = RequestMethod.POST)
-	    public String addPerson(@ModelAttribute("student") Student p){
-
-	        if(p.getId() == 0){
+	  public String addPerson(@ModelAttribute("student") Student p, BindingResult result, HttpServletRequest request){
+		  String filename = null;
+          byte[] bytes;
+          if(!p.getImage().isEmpty())
+         {
+              
+             try
+             {
+               bytes=p.getImage().getBytes();
+                 ss.addPerson(p);
+                 System.out.println("Data Inserted");
+            
+            
+         
+                 
+                            String path=request.getSession().getServletContext().getRealPath("/resources/images/"+p.getId()+".jpg");
+                            System.out.println("Path = "+path);
+                            System.out.println("File name = "+p.getImage().getOriginalFilename());
+                            File f=new File(path);
+                            BufferedOutputStream bs=new BufferedOutputStream(new FileOutputStream(f));
+                            bs.write(bytes);
+                            bs.close();
+                            System.out.println("Image uploaded");
+             }
+                     catch(Exception ex)
+             {
+                 System.out.println(ex.getMessage());
+             }
+         }
+              
+              
+              
+               if (result.hasErrors())
+               {
+              
+                     return "studentdetails";
+       
+               }
+               else
+               {
+       
+                     if(p.getId() == 0){
+             this.ss.addPerson(p);
+               }
+        }
+		 
+		         if(p.getId() == 0){
 	            //new person, add it
 	            this.ss.addPerson(p);
-	        }else{
+	        }
+		     else{
 	            //existing person, call update
 	            this.ss.updatePerson(p);
 	        }
 	        return "redirect:/students";
-	     }
+        }
+        
 	 
 	 @RequestMapping("/remove/{id}")
 	    public String removePerson(@PathVariable("id") int id){
@@ -141,86 +186,5 @@ private StudentService ss;
 			return("redirect:/students");
 		}
 //Multipart
-	    @RequestMapping(value = "/upload", method = RequestMethod.GET)
-	    public String crunchifyDisplayForm() {
-	        return "uploadfile";
-	    }
-	 
-	    @RequestMapping(value = "/savefiles", method = RequestMethod.POST)
-	    public String crunchifySave(
-	            @ModelAttribute("uploadForm") CrunchifyFileUpload uploadForm,
-	            Model map) throws IllegalStateException, IOException {
-	        String saveDirectory = "c:/crunchify/";
-	 
-	        List<MultipartFile> crunchifyFiles = uploadForm.getFiles();
-	 
-	        List<String> fileNames = new ArrayList<String>();
-	 
-	        if (null != crunchifyFiles && crunchifyFiles.size() > 0) {
-	            for (MultipartFile multipartFile : crunchifyFiles) {
-	 
-	                String fileName = multipartFile.getOriginalFilename();
-	                if (!"".equalsIgnoreCase(fileName)) {
-	                    // Handle file content - multipartFile.getInputStream()
-	                    multipartFile
-	                            .transferTo(new File(saveDirectory + fileName));
-	                    fileNames.add(fileName);
-	                }
-	            }
-	        }
-	 
-	        map.addAttribute("files", fileNames);
-	        return "uploadfilesuccess";
-	    }
 }
-	   /* @RequestMapping(value= "/newproductdetails", method = RequestMethod.POST)
-	    public String addProduct(@ModelAttribute("product") Student p, BindingResult result, HttpServletRequest request){
-	    
-	                String filename=null;
-	                byte[] bytes;
-	                if(!p.getImage().isEmpty())
-	               {
-	                    
-	                   try
-	                   {
-	                     bytes=p.getImage().getBytes();
-	                       ps.addProduct(p);
-	                       System.out.println("Data Inserted");
-	                  
-	                  
-	               
-	                       
-	                                  String path=request.getSession().getServletContext().getRealPath("/resources/images/"+p.getId()+".jpg");
-	                                  System.out.println("Path = "+path);
-	                                  System.out.println("File name = "+p.getImage().getOriginalFilename());
-	                                  File f=new File(path);
-	                                  BufferedOutputStream bs=new BufferedOutputStream(new FileOutputStream(f));
-	                                  bs.write(bytes);
-	                                  bs.close();
-	                                  System.out.println("Image uploaded");
-	                   }
-	                           catch(Exception ex)
-	                   {
-	                       System.out.println(ex.getMessage());
-	                   }
-	               }
-	                    
-	                    
-	                    
-	                     if (result.hasErrors())
-	                     {
-	                    
-	                           return "addnew";
-	             
-	                     }
-	                     else
-	                     {
-	             
-	                           if(p.getId() == 0){
-	                   this.ps.addProduct(p);
-	                     }
-	              }
-	              return "redirect:/adminproducts";
-	    }*/
-
 

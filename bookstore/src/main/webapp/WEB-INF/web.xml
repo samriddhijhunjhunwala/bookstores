@@ -22,6 +22,14 @@
 		<param-value>/WEB-INF/dispatcher-servlet.xml,
 		/WEB-INF/hibernate.cfg.xml</param-value>
 	</context-param>
+	
+	<!--<context-param> 
+    <description>Location to store uploaded file</description> 
+    <param-name>file-upload</param-name> 
+    <param-value>
+         C:\J2EE\apache-tomcat-8.0.33\webapps\
+     </param-value> 
+</context-param>-->
  
 	<listener>
 		<listener-class>

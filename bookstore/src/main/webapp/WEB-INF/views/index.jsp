@@ -9,7 +9,6 @@
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
-
   <style>
     .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
@@ -19,13 +18,23 @@
 .carousel{
     background: #2f4357;
 }
-.panel-footer.panel-custom {
-    background: black;
-    color: white;
-}
+
 div > h3 {
 color:white;
 font-weight:bold;
+}
+.verticalLine {
+    border-left: thick solid #ff0000;
+}
+hr {
+    display: block;
+    margin-top: 0.9em;
+    margin-bottom: 0.9em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    color:black;
 }
   </style>
  
@@ -34,44 +43,8 @@ font-weight:bold;
 
 
 <body>
- 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="index">BookStore.in</a> 
-      <img src="resources/images/openbook.png" style="max-height:45px;max-width:300px;">
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="index">Home</a></li>
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="books">BOOKS <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-      <li class="dropdown-header">FEATURED STORE</li>
-      <li><a href="bookuser">Preorders</a></li>
-      <li><a href="bookuser">New Realeases</a></li>
-      <li><a href="bookuser">Best Sellers</a></li>
-       <li><a href="bookuser">Indian Author</a></li>
-        <li><a href="bookuser">Academic books</a></li>
-        <li><a href="bookuser">Literature and Fiction</a></li>
-      <li class="divider"></li>
-      <li class="dropdown-header">KIDS AND TEENS</li>
-      <li><a href="upload">Picture books</a></li>
-      <li><a href="books">Comics</a></li><li>
-      <li><a href="books">Activity Books</a></li>
-      <li><a href="books">Fun and Games</a></li>
-       <li class="divider"></li>
-        <li><a href="students">Productdetails</a></li>
-    </ul>
-      <li><a href="aboutus">About Us</a></li>
-    <li><a href="contactus">Contact Us</a></li>
-      
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
-  </div>
-</nav>
-<br>
+    <!--  ========= Navigation bar======= -->
+	<%@include file="header.jsp"%>
 <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="5000">
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -117,6 +90,7 @@ font-weight:bold;
    <div class="container-fluid">
   <div class="row">
     <div class="col-md-6">
+   
          <h1>JOY OF BOOKS <span class="glyphicon glyphicon-heart"> </span></h1>
          <p>What is life without the joy of reading? 
            The excitement you feel surging inside as you turn a page. 
@@ -132,9 +106,8 @@ font-weight:bold;
         Ask any avid reader about this, and they too will agree that reading a book is same like watching a movie.</p>   
          <p>Relax and enjoy the magic that ensues when you combine a bookstore full of books, 
             skillful stop-motion animation, haunting music, a boatload of creativity and 28 
-             volunteers: The Joy of Books is a brilliant video by Sean Ohlenkamp.</p>                
-  </div>        
-
+             volunteers: The Joy of Books is a brilliant video by Sean Ohlenkamp.</p>      
+  </div>
    <br>
    <div class="col-md-6"><span class="pull-right">
     <iframe width="540" height="360" src="https://www.youtube.com/embed/SKVcQnyEIT8" frameborder="0" allowfullscreen></iframe>
@@ -142,21 +115,10 @@ font-weight:bold;
      </div>
      </div>
      </div>
-   
-
-
-
-
-
- <footer>
-<br><br>
-<div class="panel-footer panel-custom text-center">
-                <div class="container-fluid">
-                 <p>Copyright &copy;BookStore.in 2016</p>
-                </div>
-                </div>
- </footer>     
-      
+     <br>
+     <hr>
+   <!--  ========= footer======= -->
+	<%@include file="footer.jsp"%> 
     
 
 </body>
