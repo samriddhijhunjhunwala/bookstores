@@ -1,8 +1,8 @@
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>  
  <html>  
  <head>  
-   <title></title>  
+   <title>BOOKS</title>  
    <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -63,15 +63,16 @@
     }
    </style>  
  </head>  
+
  <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="index">BookStore.in</a>
+      <a class="navbar-brand" href="index">BookStore.in</a> 
       <img src="resources/images/openbook.png" style="max-height:45px;max-width:300px;">
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="index">Home</a></li>
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">BOOKS <span class="caret"></span></a>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="books">BOOKS <span class="caret"></span></a>
         <ul class="dropdown-menu">
       <li class="dropdown-header">FEATURED STORE</li>
       <li><a href="bookuser">Preorders</a></li>
@@ -86,9 +87,12 @@
       <li><a href="books">Comics</a></li><li>
       <li><a href="books">Activity Books</a></li>
       <li><a href="books">Fun and Games</a></li>
+       <li class="divider"></li>
+        <li><a href="studentdetails">Productdetails</a></li>
     </ul>
       <li><a href="aboutus">About Us</a></li>
     <li><a href="contactus">Contact Us</a></li>
+      
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
@@ -97,7 +101,6 @@
   </div>
 </nav>
 <br>
- 
 
 <body ng-app="MyForm">  
    <div ng-controller="myCtrl">  
@@ -105,11 +108,11 @@
      <div class="container-fluid">  
        <hr />  
        <table class="table table-striped">  
-         <thead>  
+          <thead>  
            <tr>  
              <th>Edit</th>
              <th>  
-               <a href="" ng-click="order('productid')">Product_id</a>  
+               <a href="" ng-click="order('id')">Product_id</a>  
              </th>   
              <th>  
                <a href="" ng-click="order('productname')">Product_name</a>  
@@ -119,11 +122,11 @@
                <th><a href="" ng-click="order('status')">Status</a> </th>  
                    <th><a href="" ng-click="order('description')">Description</a> </th>  
            </tr>  
-         </thead>  
+         </thead>
          <tbody>  
            <tr>  
-             <td>Filter =>></td>  
-             <td> <input type="text" ng-model="search.productid" /></td>  
+             <td>Filter</td>  
+             <td> <input type="text" ng-model="search.id" /></td>  
              <td> <input type="text" ng-model="search.productname" /></td>  
              <td> <input type="text" ng-model="search.category" /> </td>  
               <td><input type="text" ng-model="search.price" /> </td>  
@@ -133,17 +136,18 @@
            </tr>  
            <tr ng-repeat="user in students | orderBy:predicate:reverse | filter:paginate| filter:search" ng-class-odd="'odd'">  
              <td>  
-               <button class="btn">  
+                <!--<button class="btn">  
                  Edit  
-               </button>  
-             </td>
-             <td>{{ user.productid}}</td>  
+               </button>-->   
+              </td>
+             <td>{{ user.id}}</td>  
              <td>{{ user.productname}}</td>  
              <td>{{ user.category}}</td>  
              <td>{{ user.price}}</td>  
               <td>{{ user.status}}</td> 
                <td>{{ user.description}}</td> 
-           </tr>  
+               <td><a href="details">details</a></td>
+           </tr>
          </tbody>  
        </table>  
        <pagination total-items="totalItems" ng-model="currentPage"  

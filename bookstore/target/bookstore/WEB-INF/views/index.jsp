@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
+
   <style>
     .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
@@ -33,7 +34,7 @@ font-weight:bold;
 
 
 <body>
-
+ 
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -41,7 +42,7 @@ font-weight:bold;
       <img src="resources/images/openbook.png" style="max-height:45px;max-width:300px;">
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
+      <li class="active"><a href="index">Home</a></li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="books">BOOKS <span class="caret"></span></a>
         <ul class="dropdown-menu">
       <li class="dropdown-header">FEATURED STORE</li>
@@ -58,7 +59,7 @@ font-weight:bold;
       <li><a href="books">Activity Books</a></li>
       <li><a href="books">Fun and Games</a></li>
        <li class="divider"></li>
-        <li><a href="studentdetails">Productdetails</a></li>
+        <li><a href="students">Productdetails</a></li>
     </ul>
       <li><a href="aboutus">About Us</a></li>
     <li><a href="contactus">Contact Us</a></li>
@@ -71,7 +72,7 @@ font-weight:bold;
   </div>
 </nav>
 <br>
-<div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="7000">
+<div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="5000">
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
     <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -147,14 +148,14 @@ font-weight:bold;
 
 
 
-<footer>
+ <footer>
 <br><br>
 <div class="panel-footer panel-custom text-center">
                 <div class="container-fluid">
                  <p>Copyright &copy;BookStore.in 2016</p>
                 </div>
                 </div>
- </footer>       
+ </footer>     
       
     
 

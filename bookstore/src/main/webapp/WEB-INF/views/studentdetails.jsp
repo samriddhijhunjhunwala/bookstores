@@ -11,20 +11,28 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<style>  
-  .panel-footer.panel-custom {
-    background: black;
-    color: white;
- }
-    p
-    {
-    color: black;
-    }
-    #pname{
-     color: white;
-     }
-  </style>  
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">	
+  <!--  <script
+    src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script>
+    $(document)
+            .ready(
+                    function() {
+                        //add more file components if Add is clicked
+                        $('#addFile')
+                                .click(
+                                        function() {
+                                            var fileIndex = $('#fileTable tr')
+                                                    .children().length - 1;
+                                            $('#fileTable')
+                                                    .append(
+                                                            '<tr><td>'
+                                                                    + '   <input type="file" name="files['+ fileIndex +']" />'
+                                                                    + '</td></tr>');
+                                        });
+ 
+                    });
+</script>-->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">   
@@ -70,7 +78,30 @@
   </div>
 </nav>
 <br>
-
+<br>
+    <!--  <br>
+    <div align="center">
+            <form:form method="post" action="savefiles"
+            modelAttribute="uploadForm" enctype="multipart/form-data">
+ 
+            <p>Select files to upload. Press Add button to add more file
+                inputs.</p>
+ 
+            <table id="fileTable">
+                <tr>
+                    <td><input name="files[0]" type="file" /></td>
+                </tr>
+                <tr>
+                    <td><input name="files[1]" type="file" /></td>
+                </tr>
+            </table>
+            <br />
+            <input type="submit" value="Upload" />
+            <input id="addFile" type="button" value="Add File" />
+        </form:form>
+ 
+        <br />
+    </div>-->
 
 
 
@@ -158,7 +189,6 @@
 </table>  
 </form:form>
 <br>
-
 <!--  ========= Table to populate data ======= -->
 <center>
 <div class="container">
@@ -169,9 +199,9 @@
             <th>Serial No</th>  
             <th>Book Name</th>  
             <th>Author</th>  
+             <th>Price</th>
             <th>Publisher</th> 
-            <th>Price</th>
-            <th>Status</th> 
+             <th>Status</th> 
             <th>Details</th> 
           </tr>  
         </thead> 
@@ -192,12 +222,15 @@
 
         		<td><a href="<c:url value='/edit/${element.id}' />" >Edit</a></td>
             	<td><a href="<c:url value='/remove/${element.id}' />" >Delete</a></td>
+                
         	</tr>
         	</c:forEach>
         </tbody> 
 	</table>
 </div>
 </center>
+
+
 
 <footer>
 <br><br><br><br><br><br>

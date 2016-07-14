@@ -1,11 +1,17 @@
 package daoimplementation;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import model.Productlist;
+import model.Student;
 
 public class Productdaoimp extends Productlist {
-	ArrayList<Productlist> p=new ArrayList<Productlist>();
+    ArrayList<Productlist> p=new ArrayList<Productlist>();
 	public Productdaoimp(){
     
     Productlist p1=new Productlist(1,"marked","novel",320,"available","book");

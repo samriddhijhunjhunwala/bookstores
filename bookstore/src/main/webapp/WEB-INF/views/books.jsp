@@ -1,4 +1,4 @@
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>  
  <html>  
  <head>  
@@ -71,7 +71,7 @@
       <img src="resources/images/openbook.png" style="max-height:45px;max-width:300px;">
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
+      <li class="active"><a href="index">Home</a></li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="books">BOOKS <span class="caret"></span></a>
         <ul class="dropdown-menu">
       <li class="dropdown-header">FEATURED STORE</li>
@@ -108,11 +108,11 @@
      <div class="container-fluid">  
        <hr />  
        <table class="table table-striped">  
-         <thead>  
+          <thead>  
            <tr>  
              <th>Edit</th>
              <th>  
-               <a href="" ng-click="order('productid')">Product_id</a>  
+               <a href="" ng-click="order('id')">Product_id</a>  
              </th>   
              <th>  
                <a href="" ng-click="order('productname')">Product_name</a>  
@@ -122,11 +122,11 @@
                <th><a href="" ng-click="order('status')">Status</a> </th>  
                    <th><a href="" ng-click="order('description')">Description</a> </th>  
            </tr>  
-         </thead>  
+         </thead>
          <tbody>  
            <tr>  
-             <td>Filter =>></td>  
-             <td> <input type="text" ng-model="search.productid" /></td>  
+             <td>Filter</td>  
+             <td> <input type="text" ng-model="search.id" /></td>  
              <td> <input type="text" ng-model="search.productname" /></td>  
              <td> <input type="text" ng-model="search.category" /> </td>  
               <td><input type="text" ng-model="search.price" /> </td>  
@@ -136,17 +136,18 @@
            </tr>  
            <tr ng-repeat="user in students | orderBy:predicate:reverse | filter:paginate| filter:search" ng-class-odd="'odd'">  
              <td>  
-               <button class="btn">  
+                <!--<button class="btn">  
                  Edit  
-               </button>  
-             </td>
-             <td>{{ user.productid}}</td>  
+               </button>-->   
+              </td>
+             <td>{{ user.id}}</td>  
              <td>{{ user.productname}}</td>  
              <td>{{ user.category}}</td>  
              <td>{{ user.price}}</td>  
               <td>{{ user.status}}</td> 
                <td>{{ user.description}}</td> 
-           </tr>  
+               <td><a href="details">details</a></td>
+           </tr>
          </tbody>  
        </table>  
        <pagination total-items="totalItems" ng-model="currentPage"  

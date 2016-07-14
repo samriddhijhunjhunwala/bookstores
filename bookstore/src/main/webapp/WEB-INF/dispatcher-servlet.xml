@@ -20,6 +20,11 @@
 	<bean id="sdi" class="daoimplementation.StudentDAOImpl"></bean>
 	
 	<bean id="ss" class="bookstore.StudentService"></bean>
+	
+<!-- ==== Creating bean for multipart ====== -->
+
+<bean id="multipartResolver"
+        class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
 
 
 </beans>

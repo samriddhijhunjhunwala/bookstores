@@ -29,10 +29,11 @@ public class StudentDAOImpl {
         session.save(p);
         
     }
-    
+   
     public void updatePerson(Student p) {
-        Session session = this.sessionFactory.getCurrentSession();
-        session.update(p);
+       Session session = this.sessionFactory.getCurrentSession();
+       session.update(p);
+      
     }
     
     public List<Student> listPersons() {

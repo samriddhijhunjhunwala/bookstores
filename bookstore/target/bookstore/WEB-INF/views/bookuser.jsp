@@ -1,3 +1,7 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +17,7 @@
     color: white;
 }
 </style>  
+
 <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">   
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <link rel="stylesheet" 
@@ -21,6 +26,7 @@ href="http://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css">
 src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" 
 src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
  
   
 </head>
@@ -48,6 +54,8 @@ src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></scrip
       <li><a href="books">Comics</a></li><li>
       <li><a href="books">Activity Books</a></li>
       <li><a href="books">Fun and Games</a></li>
+      <li class="divider"></li>
+        <li><a href="studentdetails">Productdetails</a></li>
     </ul>
       <li><a href="aboutus">About Us</a></li>
     <li><a href="contactus">Contact Us</a></li>
@@ -59,97 +67,61 @@ src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></scrip
   </div>
 </nav>
 <h1>USER PRODUCT PAGE</h1>
-
-<table id="myTable">  
+<!--  ========= Table to populate data ======= -->
+<center>
+<div class="container">
+	<table>
+		<table id="myTable" class="table table-striped" >  
         <thead>  
           <tr>  
-            <th>book_id</th>  
-            <th>Book_Name</th>  
-            <th>Authors_Name</th>  
-            <th>Price</th>  
+            <th>Serial No</th>  
+            <th>Book Name</th>  
+            <th>Author</th>  
+             <th>Price</th>
+            <th>Publisher</th> 
+             <th>Status</th> 
+            <th>Details</th> 
           </tr>  
-        </thead>  
-        <tbody>  
-          <tr>  
-            <td>001</td>  
-            <td>Charlie and the chocolate factory</td>  
-            <td>Roald Dahl</td>  
-            <td>500</td>  
-          </tr>  
-          <tr>  
-            <td>002</td>  
-            <td>The Secret Seven</td>  
-            <td>Enid Blyton</td>  
-            <td>280</td>  
-          </tr>  
-          <tr>  
-            <td>003</td>  
-            <td>Revolution 2020</td>  
-            <td>Chetan Bhagat</td>  
-            <td>350</td>  
-          </tr>  
-           <tr>  
-            <td>004</td>  
-            <td>Secret</td>  
-            <td> Rhonda Byrne</td>  
-            <td>800</td>  
-          </tr>  
-          <tr>  
-            <td>005</td>  
-            <td>Feluda</td>  
-            <td>Satyajit Ray</td>  
-            <td>650</td>  
-          </tr>  
-          <tr>  
-            <td>006</td>  
-            <td>The Kite Runner</td>  
-            <td>Khaled Hosseini</td>  
-            <td>450</td>  
-          </tr>  
-          
-           <tr>  
-            <td>007</td>  
-            <td>Twilight</td>  
-            <td>Stephenie Meyer</td>  
-            <td>140</td>  
-          </tr>  
-          <tr>  
-            <td>008</td>  
-            <td>To kill a mocking bird</td>  
-            <td>Harper lee</td>  
-            <td>390</td>  
-          </tr>  
-          <tr>  
-            <td>009</td>  
-            <td>Path of Glory</td>  
-            <td>Jeffrey Archer</td>  
-            <td>299</td>  
-          </tr>  
-          
-            <tr>  
-            <td>010</td>  
-            <td>Tom Jones </td>  
-            <td>Henry Fielding</td>  
-            <td>300</td>  
-          </tr>  
-          <tr>  
-            <td>011</td>  
-            <td>David Copperfield </td>  
-            <td> Charles Dickens</td>  
-            <td>500</td>  
-          </tr>  
-          <tr>  
-            <td>012</td>  
-            <td>Pride and Prejudice</td>  
-            <td>Jane Austen</td>  
-            <td>650</td>  
-          </tr>  
-        </tbody>  
-      </table>  
-  <script>
+        </thead> 
+        <tbody>
+        <c:forEach items="${listfromtable}" var="element">
+        	<tr>
+        		<td>${element.id}</td>
+
+        		<td>${element.bookname}</td>
+
+        		<td>${element.author}</td>
+
+        		<td>${element.price}</td>
+
+        		<td>${element.publisher}</td>
+
+        		<td>${element.status}</td>
+                 <td><a href="details?id=${element.id}&name=${element.bookname}&author=${element.author}&price=${element.price}&publisher=${element.publisher}&status=${element.status}">Details</a></td>
+        		<!--  <td><a href="<c:url value='/details/${element.id}' />" >details</a></td>-->
+                
+        	</tr>
+        	</c:forEach>
+        </tbody> 
+	</table>
+</div>
+</center>
+
+<footer>
+<br><br><br><br><br><br>
+<div class="panel-footer panel-custom text-center">
+                <div class="container-fluid">
+                 <p id="pname">Copyright &copy;BookStore.in 2016</p>
+                </div>
+                </div>
+ </footer>       
+
+
+
+</body>
+<script>
 $(document).ready(function(){
     $('#myTable').dataTable();
 });
 </script>
-<table id="myTable" class="table table-striped" >  
-</table>
+</html>

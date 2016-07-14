@@ -39,6 +39,8 @@
       <li><a href="books">Comics</a></li><li>
       <li><a href="books">Activity Books</a></li>
       <li><a href="books">Fun and Games</a></li>
+      <li class="divider"></li>
+        <li><a href="students">Productdetails</a></li>
     </ul>
       <li><a href="aboutus">About Us</a></li>
     <li><a href="contactus">Contact Us</a></li>
@@ -68,10 +70,10 @@
 	            </div><br><br>
 	          
 	  
-	  
+  
 	            
 
-<footer>
+  <footer>
 <br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 <div class="panel-footer panel-custom text-center">
@@ -79,8 +81,7 @@
                  <p>Copyright &copy;BookStore.in 2016</p>
                 </div>
                 </div>
- </footer>       
-      
+ </footer>
 	           
 	     
 </body>
